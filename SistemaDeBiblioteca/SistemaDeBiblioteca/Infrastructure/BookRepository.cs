@@ -16,5 +16,10 @@ namespace SistemaDeBiblioteca.Infrastructure
 		{
 			return _context.Books.ToList();
 		}
+
+		public Book GetById(int id)
+		{
+			return _context.Books.FirstOrDefault(book => book.Id == id);
+		}
 	}
 }

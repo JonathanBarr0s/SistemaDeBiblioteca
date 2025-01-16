@@ -5,5 +5,7 @@
 		void add(Book book);
 
 		List<Book> Get();
+
+		Book GetById(int id);
 	}
 }

@@ -31,5 +31,18 @@ namespace SistemaDeBiblioteca.Controllers
 			var books = _bookRepository.Get();
 			return Ok(books);
 		}
+
+		[HttpGet("{id:int}")]
+		public IActionResult GetById(int id)
+		{
+			var book = _bookRepository.GetById(id);
+
+			if (book == null)
+			{
+				return NotFound(new { message = "Livro não encontrado." });
+			}
+
+			return Ok(book);
+		}
 	}
 }
