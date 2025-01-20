@@ -5,7 +5,7 @@ using SistemaDeBiblioteca.ViewModel;
 namespace SistemaDeBiblioteca.Controllers
 {
 	[ApiController]
-	[Route("api/book")]
+	[Route("book")]
 	public class BookController : Controller
 	{
 		private readonly IBookRepository _bookRepository;
@@ -43,6 +43,19 @@ namespace SistemaDeBiblioteca.Controllers
 			}
 
 			return Ok(book);
+		}
+
+		[HttpDelete("{id:int}")]
+		public IActionResult Delete(int id)
+		{
+			var book = _bookRepository.GetById(id);
+			if (book == null)
+			{
+				return NotFound(new { message = "Livro não encontrado." });
+			}
+
+			_bookRepository.DeleteById(id);
+			return NoContent();
 		}
 	}
 }

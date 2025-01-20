@@ -7,5 +7,7 @@
 		List<Book> Get();
 
 		Book GetById(int id);
+
+		void DeleteById(int id);
 	}
 }

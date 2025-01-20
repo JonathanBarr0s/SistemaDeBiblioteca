@@ -1,4 +1,5 @@
 ﻿using SistemaDeBiblioteca.Model;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace SistemaDeBiblioteca.Infrastructure
 {
@@ -10,6 +11,16 @@ namespace SistemaDeBiblioteca.Infrastructure
 		{
 			_context.Books.Add(book);
 			_context.SaveChanges();
+		}
+
+		public void DeleteById(int id)
+		{
+			var book = _context.Books.FirstOrDefault(b => b.Id == id);
+			if (book != null)
+			{
+				_context.Books.Remove(book);
+				_context.SaveChanges();
+			}
 		}
 
 		public List<Book> Get()
