@@ -57,5 +57,24 @@ namespace SistemaDeBiblioteca.Controllers
 			_bookRepository.DeleteById(id);
 			return NoContent();
 		}
+
+		[HttpPut("{id:int}")]
+		public IActionResult Update(int id, [FromBody] BookViewModel bookView)
+		{
+			var existingBook = _bookRepository.GetById(id);
+			if (existingBook == null)
+			{
+				return NotFound(new { message = "Livro não encontrado." });
+			}
+
+			existingBook.Title = bookView.Title;
+			existingBook.Author = bookView.Author;
+			existingBook.Year = bookView.Year;
+			existingBook.NumberPages = bookView.NumberPages;
+
+			_bookRepository.Update(existingBook);
+
+			return NoContent();
+		}
 	}
 }

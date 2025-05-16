@@ -9,5 +9,7 @@
 		Book GetById(int id);
 
 		void DeleteById(int id);
+
+		void Update(Book book);
 	}
 }

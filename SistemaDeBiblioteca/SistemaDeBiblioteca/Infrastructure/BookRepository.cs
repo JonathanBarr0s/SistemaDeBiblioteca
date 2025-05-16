@@ -32,5 +32,20 @@ namespace SistemaDeBiblioteca.Infrastructure
 		{
 			return _context.Books.FirstOrDefault(book => book.Id == id);
 		}
+
+		public void Update(Book book)
+		{
+			var existingBook = _context.Books.FirstOrDefault(b => b.Id == book.Id);
+
+			if (existingBook != null)
+			{
+				existingBook.Title = book.Title;
+				existingBook.Author = book.Author;
+				existingBook.NumberPages = book.NumberPages;
+				existingBook.Year = book.Year;
+
+				_context.SaveChanges();
+			}
+		}
 	}
 }
