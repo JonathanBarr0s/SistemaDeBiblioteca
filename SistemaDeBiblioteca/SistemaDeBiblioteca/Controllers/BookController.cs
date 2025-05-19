@@ -16,7 +16,7 @@ namespace SistemaDeBiblioteca.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Add(BookViewModel bookView)
+		public IActionResult Add([FromForm] BookViewModel bookView)
 		{
 			var book = new Book(bookView.Title, bookView.Author, bookView.Year, bookView.NumberPages);
 
@@ -74,7 +74,7 @@ namespace SistemaDeBiblioteca.Controllers
 
 			_bookRepository.Update(existingBook);
 
-			return NoContent();
+			return Ok(new { message = "Livro alterado com sucesso." });
 		}
 	}
 }
