@@ -3,7 +3,6 @@
 ## 1. Visão Geral
 
 O projeto Biblioteca Online consiste em uma API RESTful desenvolvida em C# com ASP.NET Core, que simula a gestão de uma biblioteca digital. A aplicação permite consultar, adicionar, editar, e remover livros de um acervo armazenado em um banco de dados PostgreSQL.
-A API estará disponível localmente no endpoint https://localhost:7001/book.
 
 ## 2. Funcionalidades Principais
 
@@ -41,7 +40,7 @@ Para executar o projeto , siga os passos abaixo:
 - Banco de dados PostgreSQL em execução.
 - Ferramenta de gerenciamento de pacotes NuGet.
 
-**Passo 2: Clonar o Repositório do Projeto no GitHub**
+**Passo 1: Clonar o Repositório do Projeto no GitHub**
 
 - Abra o Git Bash ou o terminal do Git.
 - Navegue até o diretório onde deseja clonar o projeto.
@@ -50,13 +49,32 @@ Para executar o projeto , siga os passos abaixo:
     git clone https://github.com/JonathanBarr0s/SistemaDeBiblioteca.git
     ```
 
-**Passo 3: Abrir o Projeto no Visual Studio**
+**Passo 2: Abrir o Projeto no Visual Studio**
 
    - Inicie o Visual Studio após a instalação.
    - Clique em "Abrir um projeto ou solução".
    - Navegue até o diretório onde você clonou o repositório.
    - Selecione o arquivo da solução (`.sln`) e clique em "Abrir".
 
-**Passo 4: Executar o Projeto**
+**Passo 3: Instalando Bibliotecas**
+
+Instale as bibliotecas:
+
+- Microsoft.EntityFrameworkCore
+- Npgsql.EntityFrameworkCore.PostgreSQL
+
+**Passo 4: Configurar a String de Conexão**
+
+No arquivo ConnectionContext.cs, configure a string de conexão com o seu banco de dados PostgreSQL:
+
+```csharp
+{
+"Server=localhost;" +
+"Port=5432;Database=Biblioteca;" +
+"User Id=seu_usuario;" +
+"Password=sua_senha;"
+},
+```
+**Passo 5: Executar o Projeto**
 
    - Inicie o projeto apertando `F5`.
