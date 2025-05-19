@@ -2,8 +2,8 @@
 
 ## 1. Visão Geral
 
-O projeto Biblioteca Online consiste em uma API RESTful desenvolvida em C# com ASP.NET Core, que simula a gestão de uma biblioteca digital. A aplicação permite consultar, adicionar, editar, e remover livros de um acervo armazenado em um banco de dados.
-A API estará disponível localmente no endpoint http://localhost:5035/book.
+O projeto Biblioteca Online consiste em uma API RESTful desenvolvida em C# com ASP.NET Core, que simula a gestão de uma biblioteca digital. A aplicação permite consultar, adicionar, editar, e remover livros de um acervo armazenado em um banco de dados PostgreSQL.
+A API estará disponível localmente no endpoint https://localhost:7001/book.
 
 ## 2. Funcionalidades Principais
 
@@ -17,7 +17,7 @@ A API fornece as seguintes operações sobre a coleção de livros:
 | `PUT`       | `/book/{id}` | Substitui completamente os dados de um livro   |
 | `DELETE`    | `/book/{id}` | Remove um livro da coleção                     |
 
-## Estrutura dos dados
+## 3. Estrutura dos dados
 
 Cada livro no banco de dados possui a seguinte estrutura:
 
@@ -31,16 +31,15 @@ Cada livro no banco de dados possui a seguinte estrutura:
 },
 ```
 
-## 3. Instalação
+## 4. Instalação
 
-Para executar o projeto, você precisará configurar o ambiente de desenvolvimento e baixar o projeto do GitHub.
+Para executar o projeto , siga os passos abaixo:
 
-**Passo 1: Baixar e Instalar o Visual Studio**
+**Pré-requisitos**
 
-- Vá para [visualstudio.microsoft.com](https://visualstudio.microsoft.com/).
-- Clique em "Download Visual Studio".
-- Escolha a edição "Community" que é gratuita e clique em "Free Download".
-- Execute o instalador baixado.
+- Visual Studio.
+- Banco de dados PostgreSQL em execução.
+- Ferramenta de gerenciamento de pacotes NuGet.
 
 **Passo 2: Clonar o Repositório do Projeto no GitHub**
 
