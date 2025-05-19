@@ -36,9 +36,8 @@ Para executar o projeto , siga os passos abaixo:
 
 **Pré-requisitos**
 
-- Visual Studio.
-- Banco de dados PostgreSQL em execução.
-- Ferramenta de gerenciamento de pacotes NuGet.
+- Visual Studio
+- Banco de dados PostgreSQL em execução
 
 **Passo 1: Clonar o Repositório do Projeto no GitHub**
 
