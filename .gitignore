@@ -6,6 +6,8 @@
 # $ git config --global mergetool.keepBackup false
 *.orig
 
+appsettings.Development.json
+
 # Created by git when using merge tools for conflicts
 *.BACKUP.*
 *.BASE.*
@@ -418,3 +420,4 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/git,visualstudio
+/SistemaDeBiblioteca/SistemaDeBiblioteca/appsettings.Development.json

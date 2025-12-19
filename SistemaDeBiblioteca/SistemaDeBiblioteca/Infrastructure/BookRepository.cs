@@ -1,11 +1,17 @@
-﻿using SistemaDeBiblioteca.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using SistemaDeBiblioteca.Model;
 using static System.Reflection.Metadata.BlobBuilder;
 
 namespace SistemaDeBiblioteca.Infrastructure
 {
 	public class BookRepository : IBookRepository
 	{
-		private readonly ConnectionContext _context = new ConnectionContext();
+		private readonly AppDbContext _context;
+
+		public BookRepository(AppDbContext context)
+		{
+			_context = context;
+		}
 
 		public void add(Book book)
 		{
