@@ -14,14 +14,9 @@
 
 O projeto **Biblioteca Online** consiste em uma **API RESTful** desenvolvida em **C#** com **ASP.NET Core**, que simula a gestão de uma **biblioteca digital**. A aplicação permite **consultar, adicionar, editar, e remover** livros de um acervo armazenado em um banco de dados PostgreSQL.
 
-🔗 **Acesse a API em produção:**
+🐳 **Docker Image: https://hub.docker.com/r/jonathanbarr0s/sistema-de-biblioteca**
 
-<div align="center">
-
-👉  **https://sistemadebiblioteca-zko7.onrender.com**  👈
-
-
-</div>
+🔗 **Acesse a API: https://sistemadebiblioteca-zko7.onrender.com**
 
 ###### *Nota: Esta API pode levar até 50 segundos para inicializar na primeira requisição. Isso ocorre porque ela está hospedada no plano gratuito do Render, que hiberna a aplicação quando fica inativa.*
 
@@ -155,7 +150,7 @@ O Postman irá gerar automaticamente:
 
 Abaixo estão as URLs conforme o ambiente que você deseja consumir. Altere em Environments > BibliotecaOnline Environment.
 
-#### 4.2.1 Render (produção)
+#### 4.2.1 Render
 
 Use esta URL para importar e testar a API hospedada no Render:
 
