@@ -24,6 +24,8 @@ using (var scope = app.Services.CreateScope())
 	db.Database.Migrate();
 }
 
+app.UseSwaggerDocumentation();
+
 if (app.Environment.IsDevelopment()) {
 	app.UseSwagger();
 	app.UseSwaggerUI();
